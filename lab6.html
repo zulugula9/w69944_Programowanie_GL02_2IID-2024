@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lab6.css">
+    <script src="lab6.js"></script> 
+</head>
+<body>
+        
+            <button class="button"onclick="But()" id="button1">Przycisk 1</button>
+            <button class="button"onclick="But()" id="button2">Przycisk 2</button>
+            <button class="button"onclick="But()" id="button3">Przycisk 3</button>
+            <div id="elementToToggle" class="hidden">
+                Ten element można ukryć lub pokazać.
+            </div>
+            <button class="button" onclick="F1()"id="toggleButton">Przełącz Widoczność</button>
+            <label >Podaj Wartosc do listy:</label><br>
+            <input type="text" id="lis"><br>
+            <input type="button" onclick="DodList()" value="Dodaj do listy"><br>
+            <ul id="item123">
+            
+            </ul>
+            <input type="text" id="firstNameInput" placeholder="Imie">
+            <input type="text" id="lastNameInput" placeholder="Nazwisko">
+            <button class="buttoni" onclick="addItemToTable()">Dodaj do tabeli</button>
+            <table id="dataTable">
+                <tr>
+                    <th>Imie</th>
+                    <th>Nazwisko</th>
+                </tr>
+            </table>
+        </body>
+</html>
