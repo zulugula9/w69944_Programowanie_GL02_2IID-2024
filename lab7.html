@@ -8,51 +8,99 @@
     <script src="lab7.js"></script> 
 </head>
 <body>
-    <form id="myForm">
-        <div>
-            <label for="imie">imie:</label>
-            <input type="text" id="imie" required>
-            <div id="imieError" class="error-message"></div>
+    <form class="form" name="form" novalidate>
+        <div class="control">
+            <label>Imie </label>
+            <input type="text" id="name" name="name">
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Nazwisko </label>
+            <input type="text" id="surname" name="surname">
+        </div>
+        <div class="control">
+            <label>Email: </label>
+            <input type="email" name="email"/>
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Hasło: </label>
+            <input type="password" name="password">
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Potwórz Hasło: </label>
+            <input type="password" name="confirm-password">
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Płeć:</label>
+            <div>
+                <input type="radio" id="m" name="gender" value="m">
+                <label for="m">M</label>
+                <input type="radio" id="k" name="gender" value="k">
+                <label for="k">K</label>
+            </div>
+            <span id="genderError" class="error"></span>
+        </div>
+        <div class="control">
+            <label>Telefon: </label>
+            <input type="tel" name="phone">
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Data urodzenia: </label>
+            <input type="date" name="birthDate">
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Kraj: </label>
+            <select name="country">
+                <option></option>
+                <option value="Polska">Polska</option>
+                <option value="Ukraina">Ukraina</option>
+                <option value="Litwa">Litwa</option>
+                <option value="Niemcy">Niemcy</option>
+            </select>
+            <span class="error"></span>
+        </div>
+
+        <div class="control">
+            <label>Województwo: </label>
+            <!--Atrybut disabled wyłącza element-->
+            <input type="text" disabled name="province">
+            <!--Atrybut hidden ukrywa element-->
+            <select name="province" disabled hidden>
+                <option></option>
+                <option value="Podkarpacie">Podkarpacie</option>
+                <option value="Małopolska">Małopolska</option>
+                <option value="Mazowsze">Mazowsze</option>
+                <option value="Wielkopolska">Wielkopolska</option>
+            </select>
+            <span id="provinceError" class="error"></span>
+        </div>
+        <div class="control">
+            <label>Adres zamieszkania: </label>
+            <input type="text" disabled name="address">
+            <span class="error"></span>
         </div>
         <div>
-            <label for="nazwisko">nazwisko:</label>
-            <input type="text" id="nazwisko" required>
-            <div id="nazwiskoError" class="error-message"></div>
+            <!--Atrybut checked domyślnie zaznacza checkbox-->
+            <input type="checkbox" checked name="hasSameContactAddress">
+            <label>Adres korespodencyjny taki sam jak zamieszkania </label>
         </div>
-        <div>
-            <label for="mail">mail:</label>
-            <input type="email" id="mail" required>
-            <div id="mailError" class="error-message"></div>
+        <div class="contactAddress" hidden>
+            <div class="control">
+                <label>Adres korespodencyjny: </label>
+                <input type="text" disabled name="contactAddress">
+                <span class="error"></span>
+            </div>
         </div>
-        <div>
-            <label for="haslo">haslo:</label>
-            <input type="password" id="haslo" minlength="8" required>
-            <div id="hasloError" class="error-message"></div>
+
+        <div class="control actions">
+            <input type="submit" value="Zapisz">
         </div>
-        <div>
-            <label for="plec">plec:</label>
-            <input type="radio" id="M" name="plec" value="M" required>
-            <label for="M">M</label>
-            <input type="radio" id="K" name="plec" value="K" required>
-            <label for="K">K</label>
-            <div id="plecError" class="error-message"></div>
-        </div>
-        <div>
-            <label for="telefon">telefon:</label>
-            <input type="text" id="telefon" pattern="[0-9]{9}" required>
-            <div id="telefonError" class="error-message"></div>
-        </div>
-        <div>
-            <label for="data">data:</label>
-            <input type="date" id="data" required>
-            <div id="dataError" class="error-message"></div>
-        </div>
-        <div>
-            <label for="kraj">kraj:</label>
-            <input type="text" id="kraj" required>
-            <div id="krajError" class="error-message"></div>
-        </div>
-        <button type="submit">Submit</button>
     </form>
 </body>
+
 </html>
