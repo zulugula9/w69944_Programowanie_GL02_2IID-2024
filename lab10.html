@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lab10.js"></script> 
+</head>
+<body>
+    <form class="form" name="form" novalidate>
+        <div class="control">
+            <label>Imie </label>
+            <input type="text" id="name" name="name">
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Nazwisko </label>
+            <input type="text" id="surname" name="surname">
+        </div>
+        <div class="control">
+            <label>Email: </label>
+            <input type="email" name="email"/>
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Hasło: </label>
+            <input type="password" name="password">
+            <span class="error"></span>
+        </div>
+        <div class="control">
+            <label>Potwórz Hasło: </label>
+            <input type="password" name="confirm-password">
+            <span class="error"></span>
+        </div>
+        <div class="control actions">
+            <input type="submit" value="Zapisz">
+        </div>
+    </form>
+</body>
+</html>
